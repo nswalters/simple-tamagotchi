@@ -7,7 +7,8 @@ import '../styles/sleep.scss';
 import eat from './components/eat';
 
 const init = () => {
-  eat.buildDomString();
+  eat.buildBaseDomString();
+  eat.addButtonListeners();
 };
 
 init();
