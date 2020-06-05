@@ -17,7 +17,7 @@ const setFullScore = (increment) => {
 
 const createNameHeader = () => {
   const domString = `
-    <h2 id='#eatHeader'>Eat</h2>
+    <h2 id='eatHeader'>Eat</h2>
   `;
   return domString;
 };
