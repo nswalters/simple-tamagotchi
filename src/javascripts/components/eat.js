@@ -1,25 +1,35 @@
-// The Eat component should appear in the upper left quadrant. It should have a private variable called full. This variable should be set to 100 on page load. This module should have 2 buttons. One should be a healthy food that adds 10 to full when pressed. The other button should be an unhealthy food that subtracts 3 from full when pushed.
-
-// The quadrant should display the name, fullness score, and the two buttons. Each time a button is clicked the quadrant should be re-drawn to show the correct fullness score. The Full score should NEVER be larger than 100.
-
 import utils from '../helpers/utils';
 
 let full = 100;
+const HEALTHY_FOOD_INCREMENT = 10;
+const UNHEALTHY_FOOD_INCREMENT = -3;
 
-const getFull = () => full;
+// Exported
+const getFullScore = () => full;
 
-const setFull = (increment) => {
-  full += increment;
+const setFullScore = (increment) => {
+  if ((full + increment > 100)) {
+    full = 100;
+  } else {
+    full += increment;
+  }
 };
 
-const printFullnessScore = () => {
+const createNameHeader = () => {
   const domString = `
-  <h2>${full}</h2>
+    <h2 id='#eatHeader'>Eat</h2>
   `;
   return domString;
 };
 
-const printEatButtons = () => {
+const createFullnessScore = (fullScore) => {
+  const domString = `
+  <h3 id='fullnessScore'>${fullScore}</h3>
+  `;
+  return domString;
+};
+
+const createEatButtons = () => {
   const domString = `
   <button id="healthyButton">Healthy Food</button>
   <button id="unhealthyButton">Unhealthy Food</button>
@@ -28,16 +38,34 @@ const printEatButtons = () => {
   return domString;
 };
 
-const buildDomString = () => {
+const feedHealthyFood = () => {
+  setFullScore(HEALTHY_FOOD_INCREMENT);
+  utils.printToDom('#fullnessScore', full);
+};
+
+const feedUnhealthyFood = () => {
+  setFullScore(UNHEALTHY_FOOD_INCREMENT);
+  utils.printToDom('#fullnessScore', full);
+};
+
+// Basic Eat-quadrant DOM Update Functions (exported)
+
+const addButtonListeners = () => {
+  $('#healthyButton').click(feedHealthyFood);
+  $('#unhealthyButton').click(feedUnhealthyFood);
+};
+
+const buildBaseDomString = () => {
   let domString = '';
-  domString += printFullnessScore();
-  domString += printEatButtons();
+  domString += createNameHeader();
+  domString += createFullnessScore(getFullScore());
+  domString += createEatButtons();
 
   utils.printToDom('#eat', domString);
 };
 
 export default {
-  getFull,
-  setFull,
-  buildDomString,
+  addButtonListeners,
+  buildBaseDomString,
+  getFullScore,
 };
