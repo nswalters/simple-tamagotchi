@@ -1,4 +1,5 @@
 import utils from '../helpers/utils';
+import baseDom from './baseQuadDom';
 
 let full = 100;
 const HEALTHY_FOOD_INCREMENT = 10;
@@ -13,29 +14,6 @@ const setFullScore = (increment) => {
   } else {
     full += increment;
   }
-};
-
-const createNameHeader = () => {
-  const domString = `
-    <h2 id='eatHeader'>Eat</h2>
-  `;
-  return domString;
-};
-
-const createFullnessScore = (fullScore) => {
-  const domString = `
-  <h3 id='fullnessScore'>${fullScore}</h3>
-  `;
-  return domString;
-};
-
-const createEatButtons = () => {
-  const domString = `
-  <button id="healthyButton">Healthy Food</button>
-  <button id="unhealthyButton">Unhealthy Food</button>
-  `;
-
-  return domString;
 };
 
 const feedHealthyFood = () => {
@@ -57,9 +35,10 @@ const addButtonListeners = () => {
 
 const buildBaseDomString = () => {
   let domString = '';
-  domString += createNameHeader();
-  domString += createFullnessScore(getFullScore());
-  domString += createEatButtons();
+  domString += baseDom.createHeader('eatHeader', 'Eat');
+  domString += baseDom.createScore('fullnessScore', getFullScore());
+  domString += baseDom.createButton('healthyButton', 'Healthy Food');
+  domString += baseDom.createButton('unhealthyButton', 'Unhealthy Food');
 
   utils.printToDom('#eat', domString);
 };
