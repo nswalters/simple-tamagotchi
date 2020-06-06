@@ -1,52 +1,35 @@
-import utils from '../helpers/utils';
-import baseDom from './baseQuadDom';
+const energy = 10;
 
-let energy = 50;
-const NAP_INCREMENT = 50;
-const SLUMBER_INCREMENT = 60;
+const sleepObj = {
+  mainDivId: '#sleep',
+  headerId: 'sleepHeader',
+  headerText: 'Sleep',
+  scoreId: 'energyScore',
+  score: energy,
+  btnOneId: 'napButton',
+  btnOneHeader: 'Nap',
+  btnOneIconClass: 'fas fa-5x fa-tired',
+  btnTwoId: 'slumberButton',
+  btnTwoHeader: 'Slumber',
+  btnTwoIconClass: 'fas fa-5x fa-bed',
+  NAP_INCREMENT: 50,
+  SLUMBER_INCREMENT: 60,
+};
 
 // Exported
-const getEnergyScore = () => energy;
+const getSleepObj = () => sleepObj;
+const getScore = () => sleepObj.score;
 
-const setEnergyScore = (increment) => {
-  if ((energy + increment > 100)) {
-    energy = 100;
+const setScore = (increment) => {
+  if ((sleepObj.score + increment > 100)) {
+    sleepObj.score = 100;
   } else {
-    energy += increment;
+    sleepObj.score += increment;
   }
 };
 
-const napTime = () => {
-  setEnergyScore(NAP_INCREMENT);
-  utils.printToDom('#energyScore', energy);
-};
-
-const slumberTime = () => {
-  setEnergyScore(SLUMBER_INCREMENT);
-  utils.printToDom('#energyScore', energy);
-};
-
-// Basic Eat-quadrant DOM Update Functions (exported)
-
-const addButtonListeners = () => {
-  $('#napButton').click(napTime);
-  $('#slumberButton').click(slumberTime);
-};
-
-const buildBaseDomString = () => {
-  let domString = '';
-  domString += baseDom.createHeader('sleepHeader', 'Sleep');
-  domString += baseDom.createScore('energyScore', getEnergyScore());
-  domString += '<div class="buttonRow">';
-  domString += baseDom.createButton('napButton', '<h4>Nap</h4><i class="fas fa-5x fa-tired"></i>');
-  domString += baseDom.createButton('slumberButton', '<h4>Slumber</h4><i class="fas fa-5x fa-bed"></i>');
-  domString += '</div>';
-
-  utils.printToDom('#sleep', domString);
-};
-
 export default {
-  addButtonListeners,
-  buildBaseDomString,
-  getEnergyScore,
+  getSleepObj,
+  getScore,
+  setScore,
 };
