@@ -38,8 +38,8 @@ const buildBaseDomString = () => {
   domString += baseDom.createHeader('playHeader', 'Play');
   domString += baseDom.createScore('funScore', getFunScore());
   domString += '<div class="buttonRow">';
-  domString += baseDom.createButton('funButton', '<i class="fas fa-5x fa-grin-beam"></i>');
-  domString += baseDom.createButton('slightlyFunButton', '<i class="fas fa-5x fa-smile"></i>');
+  domString += baseDom.createButton('funButton', '<h4>Super Fun</h4><i class="fas fa-5x fa-grin-beam"></i>');
+  domString += baseDom.createButton('slightlyFunButton', '<h4>Slightly Fun</h4><i class="fas fa-5x fa-smile"></i>');
   domString += '</div>';
 
   utils.printToDom('#play', domString);

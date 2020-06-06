@@ -1,4 +1,4 @@
-const createHeader = (id, text) => `<h1 id='${id}'>${text}</h2>`;
+const createHeader = (id, text) => `<h1 id='${id}'>${text}</h1>`;
 
 const createScore = (id, score) => `<h3 id='${id}' class='score'>${score}</h3>`;
 

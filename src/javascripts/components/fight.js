@@ -38,8 +38,8 @@ const buildBaseDomString = () => {
   domString += baseDom.createHeader('fightHeader', 'Fight');
   domString += baseDom.createScore('strengthScore', getStrengthScore());
   domString += '<div class="buttonRow">';
-  domString += baseDom.createButton('runButton', '<i class="fas fa-5x fa-running"></i>');
-  domString += baseDom.createButton('fightButton', '<i class="fas fa-5x fa-hand-rock"></i>');
+  domString += baseDom.createButton('runButton', '<h4>Run Away</h4><i class="fas fa-5x fa-running"></i>');
+  domString += baseDom.createButton('fightButton', '<h4>Fight</h4><i class="fas fa-5x fa-hand-rock"></i>');
   domString += '</div>';
 
   utils.printToDom('#fight', domString);

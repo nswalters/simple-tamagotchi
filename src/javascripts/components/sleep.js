@@ -38,8 +38,8 @@ const buildBaseDomString = () => {
   domString += baseDom.createHeader('sleepHeader', 'Sleep');
   domString += baseDom.createScore('energyScore', getEnergyScore());
   domString += '<div class="buttonRow">';
-  domString += baseDom.createButton('napButton', '<i class="fas fa-5x fa-tired"></i>');
-  domString += baseDom.createButton('slumberButton', '<i class="fas fa-5x fa-bed"></i>');
+  domString += baseDom.createButton('napButton', '<h4>Nap</h4><i class="fas fa-5x fa-tired"></i>');
+  domString += baseDom.createButton('slumberButton', '<h4>Slumber</h4><i class="fas fa-5x fa-bed"></i>');
   domString += '</div>';
 
   utils.printToDom('#sleep', domString);

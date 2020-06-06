@@ -14,20 +14,35 @@ body {
 .buttonRow {
   display: flex;
   justify-content: space-around;
-  align-items: flex-end;
-  height: 35%;
+  align-items: center;
+  height: 31%;
+  box-shadow: inset 0px 0px 400px 110px rgba(0, 0, 0, 0.1);
 }
 
-.quad button {
-  height: 10vh;
-  width: 20vw;
+.quad {
+  button {
+    height: 10vh;
+    width: 20vw;
+    background: none;
+    border: none;
+  }
 }
 
-.quad h1 {
-  text-align: center;
+.quad {
+  h1 {
+    text-align: center;
+    box-shadow: inset 0px 0px 400px 110px rgba(0, 0, 0, 0.1);
+    margin-top: 0px;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    text-shadow: 1px 0 gray;
+  }
 }
 
-.quad .score {
-  text-align: center;
-  font-size: 100px;
+.quad {
+  .score {
+    text-align: center;
+    font-size: 100px;
+    text-shadow: 2px 0 gray;
+  }
 }
