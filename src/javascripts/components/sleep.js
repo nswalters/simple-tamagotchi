@@ -1,4 +1,4 @@
-const energy = 10;
+const energy = 50;
 
 const sleepObj = {
   mainDivId: '#sleep',
