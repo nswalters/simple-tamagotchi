@@ -1,6 +1,6 @@
 const createHeader = (id, text) => `<h1 id='${id}'>${text}</h2>`;
 
-const createScore = (id, score) => `<h3 id='${id}'>${score}</h3>`;
+const createScore = (id, score) => `<h3 id='${id}' class='score'>${score}</h3>`;
 
 const createButton = (buttonId, buttonText) => {
   const domString = `
