@@ -16,12 +16,12 @@ const setEnergyScore = (increment) => {
   }
 };
 
-const runAway = () => {
+const napTime = () => {
   setEnergyScore(NAP_INCREMENT);
   utils.printToDom('#energyScore', energy);
 };
 
-const fight = () => {
+const slumberTime = () => {
   setEnergyScore(SLUMBER_INCREMENT);
   utils.printToDom('#energyScore', energy);
 };
@@ -29,8 +29,8 @@ const fight = () => {
 // Basic Eat-quadrant DOM Update Functions (exported)
 
 const addButtonListeners = () => {
-  $('#napButton').click(runAway);
-  $('#slumberButton').click(fight);
+  $('#napButton').click(napTime);
+  $('#slumberButton').click(slumberTime);
 };
 
 const buildBaseDomString = () => {
