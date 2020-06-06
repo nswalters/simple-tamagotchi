@@ -1,3 +1,5 @@
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+
 body {
   margin: 0px;
   padding: 0px;
@@ -7,4 +9,25 @@ body {
   display: grid;
   grid-template-columns: 50vw 50vw;
   grid-template-rows: 10vh 45vh 45vh;
+}
+
+.buttonRow {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  height: 35%;
+}
+
+.quad button {
+  height: 10vh;
+  width: 20vw;
+}
+
+.quad h1 {
+  text-align: center;
+}
+
+.quad .score {
+  text-align: center;
+  font-size: 100px;
 }

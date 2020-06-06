@@ -37,8 +37,10 @@ const buildBaseDomString = () => {
   let domString = '';
   domString += baseDom.createHeader('eatHeader', 'Eat');
   domString += baseDom.createScore('fullnessScore', getFullScore());
-  domString += baseDom.createButton('healthyButton', 'Healthy Food');
-  domString += baseDom.createButton('unhealthyButton', 'Unhealthy Food');
+  domString += '<div class="buttonRow">';
+  domString += baseDom.createButton('healthyButton', '<i class="fas fa-5x fa-apple-alt"></i>');
+  domString += baseDom.createButton('unhealthyButton', '<i class="fas fa-5x fa-cookie"></i>');
+  domString += '</div>';
 
   utils.printToDom('#eat', domString);
 };

@@ -37,8 +37,10 @@ const buildBaseDomString = () => {
   let domString = '';
   domString += baseDom.createHeader('fightHeader', 'Fight');
   domString += baseDom.createScore('strengthScore', getStrengthScore());
-  domString += baseDom.createButton('runButton', 'RUN!');
-  domString += baseDom.createButton('fightButton', 'FIGHT!');
+  domString += '<div class="buttonRow">';
+  domString += baseDom.createButton('runButton', '<i class="fas fa-5x fa-running"></i>');
+  domString += baseDom.createButton('fightButton', '<i class="fas fa-5x fa-hand-rock"></i>');
+  domString += '</div>';
 
   utils.printToDom('#fight', domString);
 };
