@@ -8,10 +8,10 @@ const funObj = {
   score: fun,
   btnOneId: 'funButton',
   btnOneHeader: 'Super Fun',
-  btnOneIconClass: 'fas fa-5x fa-grin-beam',
+  btnOneIconClass: 'fas fa-3x fa-grin-beam',
   btnTwoId: 'slightlyFunButton',
   btnTwoHeader: 'Slightly Fun',
-  btnTwoIconClass: 'fas fa-5x fa-smile',
+  btnTwoIconClass: 'fas fa-3x fa-smile',
   SUPER_FUN_INCREMENT: 10,
   SLIGHTLY_FUN_INCREMENT: -2,
 };

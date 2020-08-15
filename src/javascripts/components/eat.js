@@ -8,10 +8,10 @@ const eatObj = {
   score: full,
   btnOneId: 'healthyButton',
   btnOneHeader: 'Healthy',
-  btnOneIconClass: 'fas fa-5x fa-apple-alt',
+  btnOneIconClass: 'fas fa-3x fa-apple-alt',
   btnTwoId: 'unhealthyButton',
   btnTwoHeader: 'Unhealthy',
-  btnTwoIconClass: 'fas fa-5x fa-cookie',
+  btnTwoIconClass: 'fas fa-3x fa-cookie',
   HEALTHY_FOOD_INCREMENT: 10,
   UNHEALTHY_FOOD_INCREMENT: -3,
 };

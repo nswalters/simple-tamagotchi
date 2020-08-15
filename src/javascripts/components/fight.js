@@ -8,10 +8,10 @@ const fightObj = {
   score: strength,
   btnOneId: 'runButton',
   btnOneHeader: 'Run Away',
-  btnOneIconClass: 'fas fa-5x fa-running',
+  btnOneIconClass: 'fas fa-3x fa-running',
   btnTwoId: 'fightButton',
   btnTwoHeader: 'Fight',
-  btnTwoIconClass: 'fas fa-5x fa-hand-rock',
+  btnTwoIconClass: 'fas fa-3x fa-hand-rock',
   RUN_INCREMENT: 1,
   FIGHT_INCREMENT: -10,
 };
