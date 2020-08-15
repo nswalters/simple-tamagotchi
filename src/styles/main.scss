@@ -8,31 +8,32 @@ body {
 #app {
   display: grid;
   grid-template-columns: 50vw 50vw;
-  grid-template-rows: 10vh 45vh 45vh;
+  // grid-template-rows: 10vh 45vh 45vh;
 }
 
 .buttonRow {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 31%;
   box-shadow: inset 0px 0px 400px 110px rgba(0, 0, 0, 0.1);
-}
 
-.quad {
   button {
-    height: 10vh;
-    width: 20vw;
-    background: none;
-    border: none;
+    margin-bottom: 1rem;
   }
 }
 
 .quad {
+  button {
+    width: 20vw;
+    background: none;
+    border: none;
+  }
+
   h1 {
     text-align: center;
     box-shadow: inset 0px 0px 400px 110px rgba(0, 0, 0, 0.1);
     margin-top: 0px;
+    margin-bottom: 0px;
     padding-top: 2vh;
     padding-bottom: 2vh;
     text-shadow: 1px 0 gray;
@@ -42,7 +43,9 @@ body {
 .quad {
   .score {
     text-align: center;
-    font-size: 100px;
+    font-size: 5rem;
     text-shadow: 2px 0 gray;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 }

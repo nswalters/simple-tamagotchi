@@ -8,10 +8,10 @@ const sleepObj = {
   score: energy,
   btnOneId: 'napButton',
   btnOneHeader: 'Nap',
-  btnOneIconClass: 'fas fa-5x fa-tired',
+  btnOneIconClass: 'fas fa-3x fa-tired',
   btnTwoId: 'slumberButton',
   btnTwoHeader: 'Slumber',
-  btnTwoIconClass: 'fas fa-5x fa-bed',
+  btnTwoIconClass: 'fas fa-3x fa-bed',
   NAP_INCREMENT: 50,
   SLUMBER_INCREMENT: 60,
 };
